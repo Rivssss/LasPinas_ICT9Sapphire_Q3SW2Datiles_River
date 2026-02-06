@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seatwork 2</title>
+    <style>
+
+body{
+    font-family: Arial;
+    background: rgb(0, 238, 255);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    margin: 0;
+    color: white;
+}
+form{
+    background: rgba(255, 0, 72, 0.71);
+    padding: 10px 30px;
+    border-radius: 10px;
+    width: 1000px;
+    text-align: center;
+}
+
+.form-control{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #00ffee;
+    border-radius: 6px; 
+    box-sizing:border-box;
+
+}
+button{
+    width: 100%;
+    padding: 7px;
+    border-radius: 6px;
+    background-color:rgb(85, 85, 85);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    cursor: pointer;
+
+}
+#result{
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    border-radius: 2px;
+    background-color: rgba(0, 249, 249, 0.801);
+}
+.navbar {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999; 
+    background-color: #403f43; 
+    padding: 6px; 
+    text-align: center;
+    color: white; 
+}
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <h2> Product locator</h2></div>
+
+<form>
+    <h1>Want a gaming laptop?</h1>
+    
+    <h3>Enter your budget and let's find the right one for you!</h3>
+
+ <label> Enter here </label>
+ <input type="number" class="form-control" id="num1"> 
+ <br>
+ <br>
+
+ <button type="button" class="btn btn-success" onclick="dothething()">
+    <h2>See discount</h2>
+ </button>
+
+
+
+ <div id="result">Your discount: </div>
+</form>
+
+
+
+<br>
+<br>
+
+
+<script>
+
+        function dothething() {
+    let thing1 = document.getElementById("num1").value;
+
+    let ops = Number(thing1) * 0.2;
+
+    document.getElementById("result").innerHTML = "You are eligible for: " + ops;
+}
+
+    </script>
+
+
+</body>
+</html>
